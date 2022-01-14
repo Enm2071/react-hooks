@@ -9,6 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/home'
   },
+  devtool:'source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
   },
