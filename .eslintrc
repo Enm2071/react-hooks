@@ -26,7 +26,8 @@
       "import/no-unresolved": [
         2, 
         { "caseSensitive": false }
-     ]
+     ],
+     "arrow-body-style": ["always"]
     },
     "globals": {
       "window": true,
