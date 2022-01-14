@@ -1,8 +1,17 @@
 import React from 'react'
+import '../styles/components/Success.css'
 
 const Success = () => {
     return (
-        <h2>Success</h2>
+        <div className="Success">
+            <div className="Success-content">
+                <h2>Oscar, Gracias por tu compra</h2>
+                <span>Tu pedido llegara en 3 dias a tu direcció:</span>
+                <div className="Success-map">
+                    Google maps
+                </div>
+            </div>
+        </div>
     )
 }
 
