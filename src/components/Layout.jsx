@@ -3,11 +3,11 @@ import '../styles/components/Layout.css'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({Children}) =>{
+const Layout = ({children}) =>{
     return(
         <div className='Main'>
             <Header/>
-            {Children}
+            {children}
             <Footer/>
         </div>
     )

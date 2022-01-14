@@ -16,7 +16,7 @@ body {
 .Header {
   display: flex;
   justify-content: space-between;
-  margin: 2rem;
+  margin: 0 0 0 0.5rem;
 }
 .Header-checkout {
   display: flex;
@@ -39,6 +39,6 @@ body {
 .Footer {
   display: flex;
   justify-content: space-between;
-  margin: 2rem;
+
 }
 
