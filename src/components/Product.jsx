@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Product = ({ product }) => {
+const Product = ({ product, handlerAddToCart }) => {
   return (
     <div className="Products-item">
       <img src={product.image} alt={product.name} />
@@ -11,13 +11,14 @@ const Product = ({ product }) => {
         </h2>
         <p>{product.description}</p>
       </div>
-      <button type='button'>Comprar</button>
+      <button type='button' onClick={() => handlerAddToCart(product)}>Comprar</button>
     </div>
   );
 };
 
 Product.propTypes = {
   product: PropTypes.object.isRequired,
+  handlerAddToCart: PropTypes.func.isRequired
 };
 
 export default Product;

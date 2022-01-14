@@ -1,21 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {useContext} from 'react'
 import Product from './Product'
+import AppContext from '../context/AppContext'
 import '../styles/components/Products.css'
-const Products = ({products}) => {
+const Products = () => {
+    const { state , addtoCart} = useContext(AppContext)
+    const { products } = state
+    const handlerAddToCart = (product) => {
+        addtoCart(product)
+    }
     return (
         <div className="Products">
             <div className="Products-items">
                 {products.map(product => (
-                    <Product key={product.id} product={product} />
+                    <Product key={product.id} product={product} handlerAddToCart={handlerAddToCart} />
                 ))}
             </div>
         </div>
     )
 }
 
-Products.propTypes = {
-    products: PropTypes.array.isRequired
-}
 
 export default Products
