@@ -16,7 +16,11 @@ const useInitialState = () => {
         setState({...state, buyer: [...state.buyer, payload]})
     }
 
-    return {state, addtoCart, removeFromCart, addToBuyer}
+    const addNewOrder = payload => {
+        setState({...state, orders: [...state.orders, payload]})
+    }
+
+    return {state, addtoCart, removeFromCart, addToBuyer, addNewOrder}
 }
 
 export default useInitialState;
