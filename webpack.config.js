@@ -16,12 +16,9 @@ module.exports = {
   module: {
     rules: [
       { 
+        test: /(jsx|js)?$/, 
         exclude: /node_modules/,
-        test: /(jsx|js)?$/, // you have app/index.js not app/index.jsx
         loader: 'babel-loader',
-        options: {
-          presets: ['react']
-        }
       },
       {
         test: /\.html$/,
