@@ -6,21 +6,23 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '/bundle.js',
+    filename: 'bundle.js',
     publicPath: '/home'
   },
-  devtool:'source-map',
+  devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
+      { 
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /(jsx|js)?$/, // you have app/index.js not app/index.jsx
+        include: resolve(__dirname, './app'),
+        loader: 'babel-loader',
+        options: {
+          presets: ['react']
+        }
       },
       {
         test: /\.html$/,
