@@ -18,7 +18,6 @@ module.exports = {
       { 
         exclude: /node_modules/,
         test: /(jsx|js)?$/, // you have app/index.js not app/index.jsx
-        include: resolve(__dirname, './app'),
         loader: 'babel-loader',
         options: {
           presets: ['react']
